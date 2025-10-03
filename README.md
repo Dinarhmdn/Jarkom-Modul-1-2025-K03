@@ -149,6 +149,79 @@ lalu masuk ke ftp user ainur menggunkan ip eru dan lakukan upload
 
 Jika sudah masuk ke wireshark lagi lakukan filter display ```ftp-data``` untuk melihat data apa yang terkirim
 
+<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-01%20174407.png" >
+
+**Soal 9**
+
+Langkah Pertama Download dan unzip file nya untuk itu saya membuat script untuk melakukannya secara otomatis
+```
+#!/bin/bash
+
+apt update && apt install -y wget unzip
+
+KITAB_URL="https://drive.google.com/uc?export=download&id=11ua2KgBu3MnHEIjhBnzqqv2RMEiJsILY"
+KITAB_ZIP="/root/kitab_penciptaan.zip"
+
+wget --no-check-certificate -O "$KITAB_ZIP" "$KITAB_URL"
+
+echo "Mengekstrak Kitab Penciptaan..."
+mkdir -p /root/extracted_kitab
+unzip -o "$KITAB_ZIP" -d /root/extracted_kitab/ 2>/dev/null
+
+echo "Isi file ZIP:"
+find /root/extracted_kitab/ -type f | while read file; do
+echo " - $file ($(du -h "$file" | cut -f1))"
+done
+
+find /root/extracted_kitab/ -type f | head -1 | xargs -I {} cp {} /shared/kitab_penciptaan.txt
+```
+Selanjutnya mengubah user Ainur menjadi readonly saya juga mennggunkan script otomatis
+
+```
+#!/bin/bash
+
+echo "=== MENGUBAH AKSES USER AINUR  ==="
+
+pkill vsftpd
+
+cat > /etc/vsftpd.conf << 'EOF'
+listen=YES
+listen_ipv6=NO
+anonymous_enable=NO
+local_enable=YES
+write_enable=NO
+local_umask=022
+dirmessage_enable=YES
+use_localtime=YES
+xferlog_enable=YES
+connect_from_port_20=YES
+chroot_local_user=NO
+allow_writeable_chroot=YES
+secure_chroot_dir=/var/run/vsftpd/empty
+pam_service_name=vsftpd
+ssl_enable=NO
+local_root=/shared
+EOF
+
+/usr/sbin/vsftpd /etc/vsftpd.conf &
+
+sleep 3
+
+echo "Konfigurasi vsftpd saat ini:"
+grep "write_enable" /etc/vsftpd.conf
+
+echo "Status FTP service:"
+netstat -tulpn | grep :21 && echo "✓ FTP service berjalan" || echo "✗ FTP service tidak berjalan"
+
+echo ""
+echo "=== AKSEŚ AINUR SEKARANG READ-ONLY ==="
+```
+
+Lalu di buka gns3 lakukan klik kanan di kabel yang menghubungkan eru dengan manwe plih start capture untuk menganalisa di wireshark
+
+Lanjut di manwe download ftp ```apt update && apt install -y ftp```
+
+lalu jalankan ```ftp -nv 10.65.1.1``` untuk masuk ke ftp server 
 
 
 
