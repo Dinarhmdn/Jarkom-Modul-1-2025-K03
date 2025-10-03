@@ -62,6 +62,58 @@ untuk melakukan anlisa jaringan, jika sudah lakukan filter display
 ip.addr == 10.65.1.3
 ```
 
+<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-01%20164956.png" >
+
+**Soal 7**
+
+Untuk Soal 7 membuat script ```.sh``` untuk melakukan install otomatis FTP server, membuat folder ```/shared```, config ftp server, membuat user ainur melkor dan membuat file uji coba untuk mengetes user
+
+```
+#!/bin/bash
+
+pkill vsftpd
+
+apt update -y
+apt install -y ftp
+apt install -y vsftpd
+
+mkdir -p /shared
+chmod 750 /shared
+chmod 640 /shared/file_test.txt
+
+cat > /etc/vsftpd.conf << 'EOF'
+listen=YES
+listen_ipv6=NO
+anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+local_umask=022
+dirmessage_enable=YES
+use_localtime=YES
+xferlog_enable=YES
+connect_from_port_20=YES
+chroot_local_user=NO
+secure_chroot_dir=/var/run/vsftpd/empty
+pam_service_name=vsftpd
+ssl_enable=NO
+local_root=/shared
+EOF
+
+service vsftpd restart
+
+useradd -m -s /bin/bash ainur 2>/dev/null
+echo "ainur:123" | chpasswd
+
+useradd -m -s /bin/bash melkor 2>/dev/null
+echo "melkor:123" | chpasswd
+
+chown ainur:ainur /shared
+chmod 750 /shared
+
+echo "Ambatukam,ambasing,ambatunat" > /shared/file_test.txt
+chown ainur:ainur /shared/file_test.txt
+```
+
 
 
 **Soal 14** 
