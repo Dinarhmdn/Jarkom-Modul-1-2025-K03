@@ -13,7 +13,14 @@ Menmbahkan NAT dan menyetting iptables di Router ERU
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s [Prefix IP].0.0/16
 ```
 
-<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src=
+<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20165315.png" />
+
+
+**Soal 3**
+
+Untuk memastikan bahwa setiap client dapat terhubung gunakan comand ping di ikuti ip tujuan
+
+<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20165315.png" />
 
 **Soal 14** 
 
