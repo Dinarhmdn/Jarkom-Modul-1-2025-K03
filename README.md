@@ -63,6 +63,8 @@ Format: sha256
 <img width="1470" height="956" alt="Screenshot 2025-10-01 at 21 07 13" src="https://github.com/user-attachments/assets/1db0dbb0-1573-48e3-8f8b-f98e237393bb" />
 <img width="1470" height="956" alt="Screenshot 2025-10-01 at 21 08 05" src="https://github.com/user-attachments/assets/6c9f5e2e-fd15-4317-9461-94bf41377e02" />
 
+```_ws.col.info == "FTP Data: 1274 bytes (PASV) (SIZE q.exe)"```
+
 ```> ca34b0926cdc3242bbfad1c4a0b42cc2750d90db9a272d92cfb6cb7034d2a3bd```
 
 d. What is the hash of the second file (w.exe)?
