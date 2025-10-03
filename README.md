@@ -1,8 +1,14 @@
 # Jarkom-Modul-1-2025-K03
 
 **Soal 1**
-Membuat topologi sesuai soa 2 switch dan 4 client
+
+Membuat topologi sesuai soal, 2 switch dan 4 client
 <img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20164406.png" />
+
+**Soal 2**
+
+Menmbahkan NAT dan menyetting iptables di Router ERU 
+
 
 **Soal 14** 
 
