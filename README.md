@@ -2,7 +2,7 @@
 
 **Soal 1**
 Membuat topologi sesuai soa 2 switch dan 4 client
-<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="[https://github.com/user-attachments/assets/fe6e21bb-2007-4153-bc4e-3bb1d303b0fa](https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20164406.png)" />
+<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20164406.png" />
 
 **Soal 14** 
 
