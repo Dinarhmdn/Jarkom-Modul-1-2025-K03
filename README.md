@@ -9,6 +9,11 @@ Membuat topologi sesuai soal, 2 switch dan 4 client
 
 Menmbahkan NAT dan menyetting iptables di Router ERU 
 
+```
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s [Prefix IP].0.0/16
+```
+
+<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src=
 
 **Soal 14** 
 
