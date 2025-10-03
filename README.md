@@ -40,7 +40,20 @@ ping google.com || apakah ada paket yang loss
 
 Agar Konfigurasi yang sudah di lakukan tidak hilang kita bisa menyimpanyna di folder /root
 
-<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-01%20162515.png" />
+<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20165315.png" />
+<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20165448.png" />
+
+
+**Soal 6**
+
+langakah pertama download dan unzip file saya menggunkan script .sh untuk meakukannya secara otomatis
+```
+#!/bin/bash
+wget --no-check-certificate "https://docs.google.com/uc?export=download&id=1bE3kF1Nclw0VyKq4bL2VtOOt53IC7lG5">unzip traffic.zip
+chmod +x traffic.sh
+./traffic.sh
+```
+
 
 **Soal 14** 
 
