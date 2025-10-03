@@ -53,6 +53,15 @@ wget --no-check-certificate "https://docs.google.com/uc?export=download&id=1bE3k
 chmod +x traffic.sh
 ./traffic.sh
 ```
+<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20170232.png" >
+
+sebelum melakukan run ```traffic.sh``` buka Gns3 dan klik kanan lalu lakukan start capture
+untuk melakukan anlisa jaringan, jika sudah lakukan filter display 
+
+```
+ip.addr == 10.65.1.3
+```
+
 
 
 **Soal 14** 
