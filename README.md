@@ -29,10 +29,18 @@ Agar setiap client bisah terhubung di internet yang bukan lokal tambahkan
 ```
 echo nameserver 192.168.122.1 > /etc/resolv.conf
 ```
-Untuk setiap client
+Untuk setiap client lalu lakukan uji coba dengn
+```
+ping google.com || apakah ada paket yang loss
+```
 
-<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-01%20162435.png" />
+<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-01%20162515.png" />
 
+**Soal 5**
+
+Agar Konfigurasi yang sudah di lakukan tidak hilang kita bisa menyimpanyna di folder /root
+
+<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-01%20162515.png" />
 
 **Soal 14** 
 
