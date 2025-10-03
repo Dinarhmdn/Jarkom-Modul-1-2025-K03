@@ -113,6 +113,34 @@ chmod 750 /shared
 echo "Ambatukam,ambasing,ambatunat" > /shared/file_test.txt
 chown ainur:ainur /shared/file_test.txt
 ```
+<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20213140.png" />
+<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-01%20165754.png" />
+<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-01%20165721.png" />
+
+**Soal 8**
+
+Untuk soal 8 membuat script ```.sh ```untuk melakukan download ,unzip file dan meabuat folder untuk tempat hasil unzipnya
+```
+#!/bin/bash
+
+echo "=== DOWNLOAD FILE DARI GOOGLE DRIVE ==="
+
+apt update && apt install -y wget unzip ftp file
+
+GDRIVE_URL="https://drive.google.com/uc?export=download&id=11ra_yTV_adsPIXeIPMSt0vrxCBZu0r33"
+OUTPUT_FILE="/root/ramalan_cuaca.zip"
+
+echo "Mendownload file dari Google Drive..."
+echo "URL: $GDRIVE_URL"
+wget --no-check-certificate -O "$OUTPUT_FILE" "$GDRIVE_URL"
+
+echo "Mengekstrak file ZIP..."
+mkdir -p /root/extracted_files
+unzip -o "$OUTPUT_FILE" -d /root/extracted_files/
+```
+
+
+
 
 
 
