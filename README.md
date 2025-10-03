@@ -119,7 +119,7 @@ chown ainur:ainur /shared/file_test.txt
 
 **Soal 8**
 
-Untuk soal 8 membuat script ```.sh ```untuk melakukan download ,unzip file dan meabuat folder untuk tempat hasil unzipnya
+Untuk soal 8 membuat script ```.sh ```untuk melakukan download ,unzip file dan meabuat folder untuk tempat hasil unzipnya ini di node ```Ulmo```
 ```
 #!/bin/bash
 
@@ -138,6 +138,13 @@ echo "Mengekstrak file ZIP..."
 mkdir -p /root/extracted_files
 unzip -o "$OUTPUT_FILE" -d /root/extracted_files/
 ```
+<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20170524.png" >
+
+setelah menjalankan script nya buka gns3 clien lalu klik kanan kaberl yang terhubung anatara eru dan ulmo untuk melakukan analisis file yang akan di upload
+jika sudah ,masih di node ulmo instal ftp 
+``` apt update && apt install -y ftp```
+lalu masuk ke ftp user ainur menggunkan ip eru dan lakukan upload
+
 
 
 
