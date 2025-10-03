@@ -1,9 +1,7 @@
-<img width="1917" height="816" alt="image" src="https://github.com/user-attachments/assets/98fbf2dc-bf2c-4b02-9e10-17f41717c680" /># Jarkom-Modul-1-2025-K03
-
 **Soal 1**
 
 Membuat topologi sesuai soal, 2 switch dan 4 client
-<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20164406.png" />
+<img  width="1917" height="816" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20164406.png" />
 
 **Soal 2**
 
@@ -13,14 +11,14 @@ Menmbahkan NAT dan menyetting iptables di Router ERU
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s [Prefix IP].0.0/16
 ```
 
-<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20165315.png" />
+<img  width="1917" height="816" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20165315.png" />
 
 
 **Soal 3**
 
 Untuk memastikan bahwa setiap client dapat terhubung gunakan comand ping di ikuti ip tujuan
 
-<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-01%20162435.png" />
+<img  width="1917" height="816" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-01%20162435.png" />
 
 **Soal 4**
 
@@ -34,14 +32,14 @@ Untuk setiap client lalu lakukan uji coba dengn
 ping google.com || apakah ada paket yang loss
 ```
 
-<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-01%20162515.png" />
+<img  width="1917" height="816" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-01%20162515.png" />
 
 **Soal 5**
 
 Agar Konfigurasi yang sudah di lakukan tidak hilang kita bisa menyimpanyna di folder /root
 
-<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20165315.png" />
-<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20165448.png" />
+<img  width="1917" height="816" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20165315.png" />
+<img  width="1917" height="816" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20165448.png" />
 
 
 **Soal 6**
@@ -53,7 +51,7 @@ wget --no-check-certificate "https://docs.google.com/uc?export=download&id=1bE3k
 chmod +x traffic.sh
 ./traffic.sh
 ```
-<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20170232.png" >
+<img  width="1917" height="816" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20170232.png" >
 
 sebelum melakukan run ```traffic.sh``` buka Gns3 dan klik kanan lalu lakukan start capture
 untuk melakukan anlisa jaringan, jika sudah lakukan filter display 
@@ -62,7 +60,7 @@ untuk melakukan anlisa jaringan, jika sudah lakukan filter display
 ip.addr == 10.65.1.3
 ```
 
-<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-01%20164956.png" >
+<img  width="1917" height="816" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-01%20164956.png" >
 
 **Soal 7**
 
@@ -113,9 +111,9 @@ chmod 750 /shared
 echo "Ambatukam,ambasing,ambatunat" > /shared/file_test.txt
 chown ainur:ainur /shared/file_test.txt
 ```
-<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20213140.png" />
-<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-01%20165754.png" />
-<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-01%20165721.png" />
+<img width="1917" height="816" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20213140.png" />
+<img width="1917" height="816" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-01%20165754.png" />
+<img width="1917" height="816" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-01%20165721.png" />
 
 **Soal 8**
 
@@ -138,18 +136,18 @@ echo "Mengekstrak file ZIP..."
 mkdir -p /root/extracted_files
 unzip -o "$OUTPUT_FILE" -d /root/extracted_files/
 ```
-<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20170524.png" >
+<img width="1917" height="816" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20170524.png" >
 
 setelah menjalankan script nya buka gns3 client lalu klik kanan kaberl yang terhubung anatara eru dan ulmo untuk melakukan analisis file yang akan di upload
 jika sudah ,masih di node ulmo instal ftp 
 ``` apt update && apt install -y ftp```
 lalu masuk ke ftp user ainur menggunkan ip eru dan lakukan upload
 
-<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20170642.png" >
+<img width="1917" height="816" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20170642.png" >
 
 Jika sudah masuk ke wireshark lagi lakukan filter display ```ftp-data``` untuk melihat data apa yang terkirim
 
-<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-01%20174407.png" >
+<img width="1917" height="816" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-01%20174407.png" >
 
 **Soal 9**
 
@@ -175,7 +173,7 @@ done
 
 find /root/extracted_kitab/ -type f | head -1 | xargs -I {} cp {} /shared/kitab_penciptaan.txt
 ```
-<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%20" >
+<img width="1917" height="816" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%20" >
 
 
 Selanjutnya mengubah user Ainur menjadi readonly saya juga mennggunkan script otomatis
@@ -219,8 +217,8 @@ netstat -tulpn | grep :21 && echo "✓ FTP service berjalan" || echo "✗ FTP se
 echo ""
 echo "=== AKSEŚ AINUR SEKARANG READ-ONLY ==="
 ```
-<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20221756.png" >
-<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20171846.png" >
+<img width="1917" height="816" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20221756.png" >
+<img width="1917" height="816" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20171846.png" >
 
 Lalu di buka gns3 lakukan klik kanan di kabel yang menghubungkan eru dengan manwe plih start capture untuk menganalisa di wireshark
 
@@ -229,11 +227,11 @@ Lanjut di manwe download ftp ```apt update && apt install -y ftp```
 lalu jalankan ```ftp -nv 10.65.1.1``` untuk masuk ke ftp server 
 lalu ketikan```user ainur 123``` untuk masuk ke user untuk download ketik ```get kitab_penciptaan.txt /root/kitab_di_manwe.txt```
 
-<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20221816.png" >
+<img width="1917" height="816" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20221816.png" >
 
 di wireshark gunakan filter display ```ftp || tcp.port == 21``` untuk menampilakan aktivitas FTP
 
-<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20221510.png" >
+<img width="1917" height="816" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20221510.png" >
 
 **Soal 10**
 Di node Melkor buat script ototmati melakukan ping ,ping pertama sebanyak 10 lalu ping kedua sebanyak 100
@@ -302,8 +300,12 @@ fi
 echo ""
 echo "=== SERANGAN SELESAI ==="
 ```
+<img width="1917" height="816" alt="image" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20224802.png">
+
 Sebelum melakukan serangn pergi ke Gns3 klik kanan kabel yang menghubungaan melkor dan eru lalu plih start capture
 stelah serangan selesai cek wireshark menggunakan filter display ``` icmp || icmpv6```
+
+<img width="1917" height="816" alt="image" src="https://github.com/user-attachments/assets/98fbf2dc-bf2c-4b02-9e10-17f41717c680" />
 
 lalu membuat script otomatis mnengecek apakah ada paket loss
 
@@ -373,7 +375,7 @@ fi
 echo "=== ANALISIS SELESAI ==="
 ```
 
-
+<img width="1917" height="816" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20224856.png">
 
 
 
