@@ -2,7 +2,7 @@
 
 **Soal 1**
 Membuat topologi sesuai soa 2 switch dan 4 client
-<img <img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/user-attachments/assets/fe6e21bb-2007-4153-bc4e-3bb1d303b0fa" />
+<img  width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/user-attachments/assets/fe6e21bb-2007-4153-bc4e-3bb1d303b0fa" />
 
 **Soal 14** 
 
