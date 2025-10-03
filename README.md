@@ -140,7 +140,7 @@ unzip -o "$OUTPUT_FILE" -d /root/extracted_files/
 ```
 <img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20170524.png" >
 
-setelah menjalankan script nya buka gns3 clien lalu klik kanan kaberl yang terhubung anatara eru dan ulmo untuk melakukan analisis file yang akan di upload
+setelah menjalankan script nya buka gns3 client lalu klik kanan kaberl yang terhubung anatara eru dan ulmo untuk melakukan analisis file yang akan di upload
 jika sudah ,masih di node ulmo instal ftp 
 ``` apt update && apt install -y ftp```
 lalu masuk ke ftp user ainur menggunkan ip eru dan lakukan upload
@@ -175,6 +175,9 @@ done
 
 find /root/extracted_kitab/ -type f | head -1 | xargs -I {} cp {} /shared/kitab_penciptaan.txt
 ```
+<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%20" >
+
+
 Selanjutnya mengubah user Ainur menjadi readonly saya juga mennggunkan script otomatis
 
 ```
@@ -216,12 +219,21 @@ netstat -tulpn | grep :21 && echo "✓ FTP service berjalan" || echo "✗ FTP se
 echo ""
 echo "=== AKSEŚ AINUR SEKARANG READ-ONLY ==="
 ```
+<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20221756.png" >
+<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20171846.png" >
 
 Lalu di buka gns3 lakukan klik kanan di kabel yang menghubungkan eru dengan manwe plih start capture untuk menganalisa di wireshark
 
 Lanjut di manwe download ftp ```apt update && apt install -y ftp```
 
 lalu jalankan ```ftp -nv 10.65.1.1``` untuk masuk ke ftp server 
+lalu ketikan```user ainur 123``` untuk masuk ke user untuk download ketik ```get kitab_penciptaan.txt /root/kitab_di_manwe.txt```
+
+<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20221816.png" >
+
+di wireshark gunakan filter display ```ftp || tcp.port == 21``` untuk menampilakan aktivitas FTP
+
+<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20221816.png" >
 
 
 
