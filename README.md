@@ -1,4 +1,4 @@
-# Jarkom-Modul-1-2025-K03
+<img width="1917" height="816" alt="image" src="https://github.com/user-attachments/assets/98fbf2dc-bf2c-4b02-9e10-17f41717c680" /># Jarkom-Modul-1-2025-K03
 
 **Soal 1**
 
@@ -233,7 +233,146 @@ lalu ketikan```user ainur 123``` untuk masuk ke user untuk download ketik ```get
 
 di wireshark gunakan filter display ```ftp || tcp.port == 21``` untuk menampilakan aktivitas FTP
 
-<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20221816.png" >
+<img width="1470" height="956" alt="Screenshot 2025-09-30 at 21 59 24" src="https://github.com/Dinarhmdn/Jarkom-Modul-1-2025-K03/blob/main/images/Screenshot%202025-10-03%20221510.png" >
+
+**Soal 10**
+Di node Melkor buat script ototmati melakukan ping ,ping pertama sebanyak 10 lalu ping kedua sebanyak 100
+
+```
+#!/bin/bash
+
+echo "=== SERANGAN PING FLOOD DARI MELKOR KE ERU ==="
+echo "Target: 10.65.1.1 (Eru)"
+echo "Jumlah paket: 100"
+echo ""
+
+
+START_TIME=$(date +%s)
+echo "Waktu mulai: $(date)"
+
+echo ""
+echo "1. TEST KONEKSI NORMAL (10 paket):"
+echo "----------------------------------"
+ping -c 10 10.65.1.1
+
+echo ""
+echo "2. SERANGAN PING FLOOD (100 paket):"
+echo "-----------------------------------"
+
+ping -c 100 -i 0.1 10.65.1.1 | tee /root/ping_attack_results.txt
+
+
+END_TIME=$(date +%s)
+DURATION=$((END_TIME - START_TIME))
+
+echo ""
+echo "3. STATISTIK SERANGAN:"
+echo "---------------------"
+echo "Durasi serangan: $DURATION detik"
+
+
+if [ -f "/root/ping_attack_results.txt" ]; then
+    echo "Hasil serangan:"
+    echo "==============="
+
+
+    PACKET_LOSS=$(grep "packet loss" /root/ping_attack_results.txt | awk '{print $6}')
+    echo "Packet Loss: $PACKET_LOSS"
+
+
+    RTT_STATS=$(grep "rtt" /root/ping_attack_results.txt)
+    if [ ! -z "$RTT_STATS" ]; then
+        echo "RTT Statistics: $RTT_STATS"
+    else
+        echo "RTT Statistics: Tidak tersedia"
+    fi
+
+
+    PACKETS_SENT=$(grep "transmitted" /root/ping_attack_results.txt | awk '{print $1}')
+    PACKETS_RECEIVED=$(grep "transmitted" /root/ping_attack_results.txt | awk '{print $4}')
+    echo "Paket dikirim: $PACKETS_SENT"
+    echo "Paket diterima: $PACKETS_RECEIVED"
+
+    if [ ! -z "$PACKETS_SENT" ] && [ ! -z "$PACKETS_RECEIVED" ]; then
+        SUCCESS_RATE=$((PACKETS_RECEIVED * 100 / PACKETS_SENT))
+        echo "Success Rate: $SUCCESS_RATE%"
+    fi
+fi
+
+echo ""
+echo "=== SERANGAN SELESAI ==="
+```
+Sebelum melakukan serangn pergi ke Gns3 klik kanan kabel yang menghubungaan melkor dan eru lalu plih start capture
+stelah serangan selesai cek wireshark menggunakan filter display ``` icmp || icmpv6```
+
+lalu membuat script otomatis mnengecek apakah ada paket loss
+
+```
+#!/bin/bash
+
+echo "=== ANALISIS PASCA SERANGAN ==="
+
+echo "1. HASIL SERANGAN PING:"
+echo "======================="
+if [ -f "/root/ping_attack_results.txt" ]; then
+    cat /root/ping_attack_results.txt | tail -10
+else
+    echo "File hasil tidak ditemukan"
+fi
+
+echo ""
+echo "2. PENGARUH TERHADAP KINERJA ERU:"
+echo "================================"
+
+echo "CPU Usage setelah serangan:"
+top -bn1 | grep "Cpu(s)" | awk '{print "CPU: " $2 "% user, " $4 "% system, " $8 "% idle"}'
+
+echo ""
+echo "Memory Usage setelah serangan:"
+free -h | grep -E "Mem|Swap"
+
+echo ""
+echo "Network Statistics:"
+ip -s link show eth1 | grep -E "RX|TX" | head -4
+
+echo ""
+echo "3. ANALISIS PACKET LOSS DAN RTT:"
+echo "================================"
+
+if [ -f "/root/ping_attack_results.txt" ]; then
+    LOSS_PERCENT=$(grep "packet loss" /root/ping_attack_results.txt | grep -o "[0-9]*%")
+    AVG_RTT=$(grep "rtt" /root/ping_attack_results.txt | awk -F'/' '{print $5 " ms"}' 2>/dev/null)
+    MIN_RTT=$(grep "rtt" /root/ping_attack_results.txt | awk -F'/' '{print $3 " ms"}' 2>/dev/null)
+    MAX_RTT=$(grep "rtt" /root/ping_attack_results.txt | awk -F'/' '{print $7 " ms"}' 2>/dev/null)
+    
+    echo "Packet Loss: $LOSS_PERCENT"
+    echo "RTT Minimum: $MIN_RTT"
+    echo "RTT Rata-rata: $AVG_RTT" 
+    echo "RTT Maksimum: $MAX_RTT"
+    
+    echo ""
+    echo "4. KESIMPULAN DAMPAK SERANGAN:"
+    echo "=============================="
+    
+    if [ "$LOSS_PERCENT" = "0%" ]; then
+        echo "✓ Tidak ada packet loss - Eru masih stabil"
+    else
+        echo "✗ Terjadi packet loss $LOSS_PERCENT - Eru mengalami gangguan"
+    fi
+    
+    if [ ! -z "$AVG_RTT" ]; then
+        RTT_VALUE=$(echo $AVG_RTT | sed 's/ ms//')
+        if (( $(echo "$RTT_VALUE > 10" | bc -l 2>/dev/null || echo "0") )); then
+            echo "⚠ RTT tinggi ($AVG_RTT) - Kemungkinan ada congestion"
+        else
+            echo "✓ RTT normal ($AVG_RTT) - Kinerja jaringan baik"
+        fi
+    fi
+fi
+
+echo "=== ANALISIS SELESAI ==="
+```
+
 
 
 
