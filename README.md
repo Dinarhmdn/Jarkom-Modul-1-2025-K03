@@ -422,6 +422,20 @@ Format: string
 ```> USB Keybord```
 <img width="1470" height="956" alt="Screenshot 2025-09-30 at 22 50 15" src="https://github.com/user-attachments/assets/d2d64bce-a4b6-4cfa-9e55-01b32659a3b3" />
 
+b. What did Melkor write?
+
+Format: string
+
+```> UGx6X3ByMHYxZGVfeTB1cl91czNybjRtZV80bmRfcDRzc3cwcmQ=```
+
+c. What is Melkor's secret message?
+
+Format: string
+
+```> Plz_pr0v1de_y0ur_us3rn4me_4nd_p4ssw0rd```
+
+```Congratulations! Here is your flag: KOMJAR25{K3yb0ard_W4rr10r_uCB8ZzhA0urwDln4pDAIkH1On}```
+
 **Soal 16**
 
 a. What credential did the attacker use to log in?
@@ -573,11 +587,18 @@ b. What is the name of the malicious file placed by the attacker?
 
 Format: file.exe
 
+<img width="1470" height="956" alt="Screenshot 2025-10-04 at 23 58 39" src="https://github.com/user-attachments/assets/fdb3daa7-1478-4331-8b66-aa05c73e7fbd" />
+<img width="1470" height="956" alt="Screenshot 2025-10-04 at 23 58 58" src="https://github.com/user-attachments/assets/52abdbea-5a1b-4612-a252-f7d25c0e6389" />
+<img width="1470" height="956" alt="Screenshot 2025-10-04 at 23 59 37" src="https://github.com/user-attachments/assets/8e6b5abc-081c-4988-a4a1-13260be47803" />
+<img width="1470" height="956" alt="Screenshot 2025-10-04 at 23 59 43" src="https://github.com/user-attachments/assets/3e52269e-8daf-43f9-961f-db43ebae7546" />
+
 ```> invest_20.dll```
 
 c. What is the hash of the file containing the malware?
 
 Format: sha256
+
+<img width="1470" height="956" alt="Screenshot 2025-10-05 at 00 00 15" src="https://github.com/user-attachments/assets/14236ca1-15bb-453a-abbc-65d7f37f93a8" />
 
 ```> 31cf42b2a7c5c558f44cfc67684cc344c17d4946d3a1e0b2cecb8eb58173cb2f```
 
